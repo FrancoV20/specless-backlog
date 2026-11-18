@@ -1,9 +1,9 @@
 # Definition of Done (DoD)
 
-Una historia solo pasa a *Done (DoD)* si cumple:
+Una historia solo pasa a *Hecho (DoD)* si cumple:
 
 ## Calidad del código
-- [ ] Sigue los estándares de codificación del equipo
+- [ ] Sigue los estándares de codificación del equipo (ESLint y Prettier en TypeScript; gofmt y golangci-lint en Go)
 - [ ] Pull Request revisado y aprobado por al menos un desarrollador adicional
 - [ ] Sin errores críticos en la revisión
 
@@ -20,9 +20,10 @@ Una historia solo pasa a *Done (DoD)* si cumple:
 
 ## Integración y despliegue
 - [ ] Código integrado a la rama principal
-- [ ] Pipeline CI/CD exitoso (Linting → Build → Tests → Seguridad → Deploy)
-- [ ] Desplegado en staging y validado antes de producción
+- [ ] Pipeline CI/CD exitoso (Linting → Build → Tests → Seguridad → Staging automático → Producción)
+- [ ] **Desplegado en producción** detrás de un interruptor de funcionalidad (*feature flag*), con métricas y logs activos
 
-## Documentación
+## Documentación y experiencia
 - [ ] Documentación técnica actualizada
-- [ ] Manuales o ayudas de usuario actualizados si corresponde
+- [ ] Documentación de uso actualizada (preguntas frecuentes o guía) si cambia algo que ve el usuario
+- [ ] Verificación básica de accesibilidad (contraste y navegación por teclado) en pantallas nuevas
